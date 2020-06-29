@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin&display=swap');
+:root{
+    --Blue: hsl(223, 87%, 63%);
+    --Pale-Blue: hsl(223, 100%, 88%);
+    --Light-Red: hsl(354, 100%, 66%);
+    --Gray: hsl(0, 0%, 59%);
+    --Very-Dark-Blue: hsl(209, 33%, 12%);
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Libre Franklin',sans-serif;
+}
+body{
+    background-color: #555;
+}
+.container{
+    max-width: 375px;
+    width: 100%;
+    background-color: white;
+    margin:auto;
+    text-align: center;
+    padding: 0px 50px;
+    height: 100vh;
+    position: relative;
+}
+.container .logo{
+    background: url('./images/logo.svg')center no-repeat;
+    height: 80px;
+
+}
+.title{
+    font-size: 20px;
+    margin: 5px 0 20px 0px;
+    color: var(--Gray);
+}
+.title span{
+    color: var(--Very-Dark-Blue);
+    font-weight: 900;
+}
+.subtitle{
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+.formContent input,.btn{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1.5px solid var(--Pale-Blue);
+    border-radius: 20px;
+    outline: 0;
+}
+.formContent small{
+    color: var(--Light-Red);
+    font-size: 11px;
+    font-weight: 600;
+    display: none;
+}
+.formContent.error small{
+    display: block;
+}
+.formContent.error input{
+    border-color: var(--Light-Red);
+}
+.formContent input::placeholder{
+    color: var(--Pale-Blue);
+}
+.btn{
+    background-color: var(--Blue);
+    color: #fff;
+    border: 0;
+    margin-top: 20px;
+    margin-bottom: 25px ;
+    box-shadow: 0px 2px 10px var(--Pale-Blue);
+}
+.section{
+    background: url('./images/illustration-dashboard.png')center no-repeat;
+    background-size: contain;
+    height: 200px;
+    margin-bottom: 25px;
+}
+.icons{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.icons .icon:nth-child(even){
+    margin: 0px 15px;
+}
+
+.icons .icon{
+    height: 35px;
+    width: 35px;
+    border: 1px solid var(--Pale-Blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.icon i{
+    color: var(--Blue);
+}
+.copyRight{
+    margin-bottom:10px;
+}
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    width: 100%;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+    font-weight: 700;
+}
+
+@media only screen and (min-width:376px){
+    .container{
+        max-width: 600px;
+        width: 100%;
+        overflow-x: hidden;
+
+    }
+}
+@media only screen and (min-width:601px){
+    .container{
+        max-width: 1440px;
+        width: 100%;
+        overflow-x: hidden;
+    }
+    .form{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 70%;
+        margin:0 auto 40px auto;
+    }
+    .formContent{
+        width: 48%;
+    }
+    .btn{
+        width: 48%;
+    }
+    .attribution{
+        font-size: 20px;
+    }
+}
